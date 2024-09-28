@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+    jpa:
+      properties:
+        hibernate:
+          generate_statistics: true
+          format_sql: true
+    datasource:
+      url: jdbc:mysql://localhost:3306/reddb
+      username: root
+      password: root
+    data:
+      redis:
+         host: localhost
+         port: 6379
+    logging:
+      level:
+        'com.rushi': debug
+        'org.hibernate.stat': info
+        'org.hibernate.SQL': info
+        'org.hibernate.orm.jdbc.bind': trace
+
